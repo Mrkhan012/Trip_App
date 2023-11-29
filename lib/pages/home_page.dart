@@ -107,7 +107,8 @@ class _HomePageState extends State<HomePage>
       required String description}) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+        image: DecorationImage(image:
+         AssetImage(image), fit: BoxFit.cover),
       ),
       child: Container(
         decoration: BoxDecoration(
