@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:trip_app/pages/details_page.dart';
 
@@ -232,18 +233,25 @@ class _HomePageState extends State<HomePage>
                     const SizedBox(
                       height: 20,
                     ),
-                   InkWell(
+                    InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailsPage(
-                              image: image,
-                              title: title,
-                              description: description,
+                        try {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailsPage(
+                                image: image,
+                                title: title,
+                                description: description,
+                              ),
                             ),
-                          ),
-                        );
+                          );
+                        } catch (error) {
+                          // Handle navigation error
+                          if (kDebugMode) {
+                            print('Error navigating to DetailsPage: $error');
+                          }
+                        }
                       },
                       child: const Text(
                         'READ MORE',
