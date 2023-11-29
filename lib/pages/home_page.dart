@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trip_app/pages/details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -105,8 +106,7 @@ class _HomePageState extends State<HomePage>
       required String description}) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(image:
-         AssetImage(image), fit: BoxFit.cover),
+        image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
       ),
       child: Container(
         decoration: BoxDecoration(
@@ -232,9 +232,23 @@ class _HomePageState extends State<HomePage>
                     const SizedBox(
                       height: 20,
                     ),
-                    const Text(
-                      'READ MORE',
-                      style: TextStyle(color: Colors.white),
+                   InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailsPage(
+                              image: image,
+                              title: title,
+                              description: description,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'READ MORE',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                     const SizedBox(
                       height: 30,
