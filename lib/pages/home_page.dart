@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage>
                           child: const Icon(
                             Icons.star,
                             color: Colors.yellow,
-                            size: 15,
+                            size: 19,
                           ),
                         ),
                         Container(
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage>
                           child: const Icon(
                             Icons.star,
                             color: Colors.yellow,
-                            size: 15,
+                            size: 19,
                           ),
                         ),
                         Container(
@@ -187,7 +187,7 @@ class _HomePageState extends State<HomePage>
                           child: const Icon(
                             Icons.star,
                             color: Colors.yellow,
-                            size: 15,
+                            size: 19,
                           ),
                         ),
                         Container(
@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage>
                           child: const Icon(
                             Icons.star,
                             color: Colors.yellow,
-                            size: 15,
+                            size: 19,
                           ),
                         ),
                         Container(
@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage>
                         ),
                         const Text(
                           '4.0',
-                          style: TextStyle(color: Colors.white70),
+                          style: TextStyle(color: Colors.white70, fontSize: 14),
                         ),
                         const Text(
                           '(2300)',
